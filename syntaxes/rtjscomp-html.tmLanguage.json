@@ -1,0 +1,42 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "rtjscomp HTML",
+	"scopeName": "text.html.rtjscomp",
+	"patterns": [
+		{ "include": "#embedded-javascript-expression" },
+		{ "include": "#embedded-javascript" },
+		{ "include": "text.html.basic" }
+	],
+	"repository": {
+		"embedded-javascript-expression": {
+			"name": "meta.embedded.expression.javascript.rtjscomp",
+			"begin": "<\\?=",
+			"beginCaptures": {
+				"0": { "name": "punctuation.section.embedded.begin.rtjscomp" }
+			},
+			"end": "\\?>",
+			"endCaptures": {
+				"0": { "name": "punctuation.section.embedded.end.rtjscomp" }
+			},
+			"contentName": "source.js.embedded.rtjscomp",
+			"patterns": [
+				{ "include": "source.js" }
+			]
+		},
+		"embedded-javascript": {
+			"name": "meta.embedded.block.javascript.rtjscomp",
+			"begin": "<\\?",
+			"beginCaptures": {
+				"0": { "name": "punctuation.section.embedded.begin.rtjscomp" }
+			},
+			"end": "\\?>",
+			"endCaptures": {
+				"0": { "name": "punctuation.section.embedded.end.rtjscomp" }
+			},
+			"contentName": "source.js.embedded.rtjscomp",
+			"patterns": [
+				{ "include": "source.js" }
+			]
+		}
+	}
+}

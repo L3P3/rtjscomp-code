@@ -1,0 +1,58 @@
+{
+	"name": "rtjscomp-code",
+	"version": "0.0.1",
+	"description": "rtjscomp development extension",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/L3P3/rtjscomp-code.git"
+	},
+	"bugs": {
+		"url": "https://github.com/L3P3/rtjscomp-code/issues"
+	},
+	"type": "module",
+	"main": "./extension.js",
+	"engines": {
+		"vscode": "^1.40.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "rtjscomp-html",
+				"aliases": ["rtjscomp HTML"]
+			},
+			{
+				"id": "rtjscomp-json",
+				"aliases": ["rtjscomp JSON"]
+			},
+			{
+				"id": "rtjscomp-txt",
+				"aliases": ["rtjscomp Text"]
+			}
+		],
+		"grammars": [
+			{
+				"language": "rtjscomp-html",
+				"scopeName": "text.html.rtjscomp",
+				"path": "./syntaxes/rtjscomp-html.tmLanguage.json"
+			},
+			{
+				"language": "rtjscomp-json",
+				"scopeName": "source.json.rtjscomp",
+				"path": "./syntaxes/rtjscomp-json.tmLanguage.json"
+			},
+			{
+				"language": "rtjscomp-txt",
+				"scopeName": "text.plain.rtjscomp",
+				"path": "./syntaxes/rtjscomp-txt.tmLanguage.json"
+			}
+		]
+	},
+	"author": "L3P3 <dev@l3p3.de> (https://l3p3.de)",
+	"license": "Zlib"
+}
