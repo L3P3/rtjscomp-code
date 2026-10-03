@@ -9,13 +9,13 @@
 	"repository": {
 		"embedded-javascript-expression": {
 			"name": "meta.embedded.expression.javascript.rtjscomp",
-			"begin": "<\\?=",
+                        "begin": "<\\?[:=]",
 			"beginCaptures": {
-				"0": { "name": "punctuation.section.embedded.begin.rtjscomp" }
+				"0": { "name": "punctuation.section.embedded.begin.php" }
 			},
 			"end": "\\?>",
 			"endCaptures": {
-				"0": { "name": "punctuation.section.embedded.end.rtjscomp" }
+				"0": { "name": "punctuation.section.embedded.end.php" }
 			},
 			"contentName": "source.js.embedded.rtjscomp",
 			"patterns": [
@@ -26,11 +26,11 @@
 			"name": "meta.embedded.block.javascript.rtjscomp",
 			"begin": "<\\?",
 			"beginCaptures": {
-				"0": { "name": "punctuation.section.embedded.begin.rtjscomp" }
+				"0": { "name": "punctuation.section.embedded.begin.php" }
 			},
 			"end": "\\?>",
 			"endCaptures": {
-				"0": { "name": "punctuation.section.embedded.end.rtjscomp" }
+				"0": { "name": "punctuation.section.embedded.end.php" }
 			},
 			"contentName": "source.js.embedded.rtjscomp",
 			"patterns": [
